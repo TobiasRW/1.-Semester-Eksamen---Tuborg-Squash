@@ -1,0 +1,870 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background-color: #F7F5FB;
+    overflow-x: hidden;
+}
+
+/* Fade Animations - Start */
+
+.fade-in{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+  }
+
+  .fade-in.appear{
+    opacity: 1;
+  }
+
+  .from-left{
+    transform: translateX(-100px);
+  }
+
+  .from-right{
+    transform: translateX(100px);
+  }
+
+  .from-bottom{
+    transform: translateY(50px);
+  }
+
+  .from-left,
+  .from-right,
+  .from-bottom{
+    transition: opacity 400ms ease-in, transform 400ms ease-in;
+    opacity: 0;
+  }
+
+  .from-left.appear,
+  .from-right.appear,
+  .from-bottom.appear{
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+/* Fade Animations - Slut */
+
+/* Header, Navigation, Burgermenu - Start */
+
+header{
+    background-image: url(/img/banner-rotate.webp);
+    min-height: 100vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo{
+    width: 80px;
+}
+
+.header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.nav-menu i{
+    color: white;
+    display: none;
+}
+
+
+.hamburger-cart-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hamburger-cart-container i{
+    color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    left: -100%;
+    top: 0px;
+    flex-direction: column;
+    background-color: rgba(255,165,0,0.65);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    height: 100vh;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.nav-link{
+    font-family: 'Sansita Swashed', cursive;
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+}
+
+.nav-item {
+    margin: 16px 0;
+}
+
+.nav-menu.active {
+    left: 0;
+    width: 100%;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Header, Navigation, Burgermenu - Slut */
+
+/* Sektion Konkurrence - Start */
+
+h1{
+    font-family: 'Sansita Swashed', cursive;
+    color: #FFA500;
+    font-weight: 550;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.win{
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.win-container{
+    background-image: url(/img/wave.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100vw;
+}
+
+.comp{
+    width: 100%;
+    border-radius: 5px;
+}
+
+h2{
+    font-family: 'Sansita Swashed', cursive;
+    color: #FFA500;
+    font-weight: 550;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+p.orange{
+    color: #FFA500;
+    font-size: 12px;
+}
+
+/* Sektion Konkurrence - Slut */
+
+/* Sektion Varianter - Start */
+
+h2.white-h2{
+    font-family: 'Sansita Swashed', cursive;
+    color: #F7F5FB;
+    font-weight: 550;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 40px;
+}
+
+h3.title-white{
+    font-family: 'Sansita Swashed', cursive;
+    color: #F7F5FB;
+    font-weight: 550;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 24px;
+}
+
+.variants{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.variants-article{
+    background-color: #FFA500;
+}
+
+p.white{
+    color: #F7F5FB;
+    padding-bottom: 2rem;
+    font-size: 12px;
+}
+
+.cylinder-container{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.cylinder{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.wave-white{
+    position: absolute;
+    top: 75%;
+    left: 0;
+}
+
+.btn-container{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.read-more-white{
+    background-color: #F7F5FB;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+   
+}
+
+.buy-white{
+    background-color: #F7F5FB;
+    text-decoration: none;
+    color: black;
+    padding: 10px 40px;
+    border-radius: 5px;
+}
+
+/* Sektion Varianter - Slut */
+
+/* Sektion Historie - Start */
+
+h3.title-orange{
+    font-family: 'Sansita Swashed', cursive;
+    color: #FFA500;
+    font-weight: 550;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 24px;
+}
+
+.story-text{
+    width: 70%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.read-more-orange{
+    background-color: #FFA500;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    margin-bottom: 8rem;
+}
+
+.story-article{
+    background-image: url(/img/wave.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100vw;
+}
+
+h2.orange-h2{
+    font-size: 40px;
+}
+
+
+/* Comparison slider */
+
+.story-container{
+    display: grid;
+    place-items: center;
+}
+
+.image-container img{
+    max-width: 100%;
+}
+
+.slide-container{
+    display: grid;
+    place-content: center;
+    position: relative;
+    overflow: hidden;
+    --position: 50%;
+}
+
+.image-container{
+    max-width: 300px;
+}
+
+.slider-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.image-before{
+    position: absolute;
+    inset: 0;
+    width: var(--position);
+}
+
+.slider{
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    opacity: 0;
+    /* for firefox - start */
+    width: 100%;
+    height: 100%;
+    /* for firefox - slut */
+}
+
+.slider:focus-visible ~ .slider-button{
+    outline: 5px solid black;
+    outline-offset: 3px;
+}
+
+.slider-line{
+    position: absolute;
+    inset: 0;
+    width: .2rem;
+    height: 100%;
+    background-color: white;
+    z-index: 10;
+    left: var(--position);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.slider-button{
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: .5rem;
+    border-radius: 100vw;
+    display: grid;
+    place-items: center;
+    top: 50%;
+    left: var(--position);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 100;
+    box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
+}
+
+/* Comparison slider */
+/* Sektion Historie - Slut */
+
+/* Sektion Insta - Start */
+
+.insta-article{
+    background-color: #FFA500;
+    margin: -2px 0 0 0 ;
+}
+
+.insta-article-pc{
+    display: none;
+}
+
+
+
+/* Automatic Image Slider - Start */
+
+@keyframes fade{
+    from{
+      opacity:0.4;
+    }
+    to{
+      opacity:1;
+    }
+  }
+  
+  #slider{
+    margin:0 auto;
+    width:80%;
+    overflow:hidden;
+    padding-bottom: 2rem;
+  }
+  
+  .slides{
+    overflow:hidden;
+    animation-name:fade;
+    animation-duration:1s;
+    display:none;
+  }
+  
+  .slides img{
+    width:100%;
+  }
+  
+  #dot{
+    margin:0 auto;
+    text-align:center;
+  }
+  .dot{
+    display:inline-block;
+    border-radius:50%;
+    background:#FB8500;
+    padding:8px;
+    margin:10px 5px;
+  }
+  
+  .working{
+    background: #F7F5FB;
+  }
+
+  /* Automatic Image Slider - Slut */
+  /* Sektion Insta - Slut */
+
+  /* Footer - Start */
+
+  footer{
+    background-color: #FFB703;
+    padding: 0 0 2rem 0;
+  }
+
+  .footer-title{
+    font-family: 'Sansita Swashed', cursive;
+    color: #F7F5FB;
+    font-weight: 550;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    font-size: 24px;
+  }
+
+  .footer-contact a, .footer-contact li{
+    text-decoration: none;
+    color: #F7F5FB;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .footer-social ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .footer-social a{
+    color: #F7F5FB;
+    text-decoration: none;
+    font-size: 35px;
+  }
+
+  .footer-nav a, .footer-nav li{
+    text-decoration: none;
+    color: #F7F5FB;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .footer-contact ul{
+    list-style-type: none;
+  }
+
+  .footer-nav ul{
+    list-style-type: none;
+  }
+
+
+  /* Footer - Slut */
+
+  /* Brakpoint Tablet */
+
+  @media (min-width: 426px){
+
+    /* Sektion Konkurrence - Start */
+
+    .comp-container img{
+        width: 70%;
+    }
+
+    .comp-container{
+        display: grid;
+        place-items: center;
+    }
+
+    .win{
+        padding-bottom: 10rem;
+        width: 70%;
+    }
+
+    h1{
+        padding: 4rem 0 2rem 0;
+        font-size: 30px;
+    }
+
+    h2{
+        padding: 2rem 0;
+    }
+
+    p.orange, p.white{
+        font-size: 16px;
+    }
+    /* Sektion Konkurrence - Slut */
+
+    /* Sektion Varianter - Start */
+
+    h3.title-white{
+        font-size: 30px;
+    }
+
+    h3.title-orange{
+        font-size: 30px;
+    }
+
+     /* Sektion Varianter - Slut */
+  }
+
+  /* Breakpoint Computer */
+
+  @media (min-width:821px){
+
+    /* Header Start */
+
+    header{
+        padding: 16px 0 0 0;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .header-nav{
+        padding: 0 2rem;
+    }
+
+    .nav-menu {
+        position: relative;
+        left: 0;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        gap: 4rem;
+    }
+
+    .nav-menu a{
+        text-decoration: none;
+    }
+
+    .nav-link{
+        font-size: 24px;
+    }
+
+    .nav-link:hover{
+        text-decoration: underline;
+    }
+
+    .nav-menu i{
+        display: block;
+    }
+
+    .hamburger-cart-container i{
+        display: none;
+    }
+
+    .hamburger-cart-container{
+        display: none;
+    }
+
+    /* Header - Slut */
+
+    /* Sektion Konkurrence - Start */
+
+    .win-container{
+        height: 800px;
+    }
+
+    h1{
+        padding-bottom: 8rem;
+        font-size: 40px;
+    }
+
+    .win{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        width: 90%;
+        /* padding-bottom: 15rem; */
+    }
+
+    .win-grid-text{
+        order: 1;
+    }
+
+    .comp-container{
+        order: 2;
+    }
+
+    .comp-container img{
+        width: 400px;
+    }
+
+     /* Sektion Konkurrence - Slut */
+     
+     /* Sektion Varianter - Start */
+
+     .variants-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        height: 450px;
+        position: relative;
+     }
+
+     .wave-white{
+        display: none;
+     }
+
+     .variants{
+        order: 2;
+     }
+
+     .cylinder-container{
+        order: 1;
+     }
+
+     img.cylinder{
+        width: 450px;
+        margin-bottom: -141px;
+     }
+
+
+     .btn-container{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .read-more-white{
+        padding: 5px 10px;
+    }
+    
+    .buy-white{
+        padding: 5px 20px;
+    }
+
+    .variants p.white{
+        padding-bottom: 1rem;
+    }
+
+    h2.orange-h2{
+        margin-bottom: -150px;
+    }
+
+     /* Sektion Varianter - Slut */
+
+     /* Sektion Historie - Start */
+
+     .orange-h2{
+        padding-bottom: 130px;
+     }
+
+     .story-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 700px;
+     }
+
+     .story-text{
+        order: 1;
+     }
+
+     .slide-container{
+        order: 2;
+        margin-bottom: 4rem;
+     }
+
+     /* Sektion Historie - Slut */
+
+     /* Sektion Insta - Start */
+
+     .insta-article{
+        display: none;
+     }
+
+     .insta-article-pc{
+        display: block;
+        background-color: #FFA500;
+        height: 400px;
+     }
+
+     .insta-flex{
+        display: flex;
+        justify-content: center;
+        justify-content: space-between;
+     }
+
+     .insta-article-pc img{
+        width: 270px;
+     }
+
+     .insta-article-pc h3{
+        font-size: 40px;
+     }
+
+     /* Sektion Insta - Slut */
+  }
+
+  /* Breakpoint Bigger PC Screens */
+
+  @media (min-width:1025px){
+
+    body{
+        max-width: 3000px;
+        margin: 0 auto;
+    }
+
+    article{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+
+    .header-nav{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    footer{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    /* Header - Start */
+
+    img.logo{
+        width: 120px;
+    }
+
+    .nav-link{
+        font-size: 32px;
+    }
+
+    /* Header - Slut */
+
+    /* Konkurrence Sektion - Start */
+
+    .win-container{
+        height: 900px;
+    }
+
+    .comp-container{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .comp-container img{
+        width: 480px;
+    }
+
+    .win{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* Konkurrence Sektion - Slut */
+
+    /* Varianter Sektion - Start */
+
+    .variants-container{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        place-items: center;
+        height: 450px;
+        position: relative;
+     }
+
+     img.cylinder{
+        width: 600px;
+        margin-bottom: -37px;
+     }
+
+     /* Varianter Sektion - Slut */
+
+     /* Historie Sektion - Start */
+
+     .story-article{
+        height: 850px;
+     }
+
+     /* Historie Sektion - Slut */
+
+     /* Insta Sektion - Start */
+
+     .insta-article-pc{
+        height: 500px;
+     }
+
+     .insta-article-pc img{
+        width: 340px;
+     }
+
+     /* Insta Sektion - Slut */
+
+  }
+
+
+  /* Breakpoint Wide Screen */
+
+  @media (min-width: 1400px){
+
+    .insta-article-pc{
+        height: 600px;
+     }
+
+    .insta-article-pc img{
+        width: 450px;
+     }
+
+     .comp-container img{
+        width: 600px;
+    }
+  }
+
+
+  
+
+
+

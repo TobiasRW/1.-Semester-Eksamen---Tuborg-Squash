@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #F7F5FB;
+    overflow-x: hidden;
+}
+
+
+/* Fade Animations - Start */
+
+.fade-in{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+  }
+
+  .fade-in.appear{
+    opacity: 1;
+  }
+
+  .from-left{
+    transform: translateX(-100px);
+  }
+
+  .from-right{
+    transform: translateX(100px);
+  }
+
+  .from-bottom{
+    transform: translateY(50px);
+  }
+
+  .from-left,
+  .from-right,
+  .from-bottom{
+    transition: opacity 400ms ease-in, transform 400ms ease-in;
+    opacity: 0;
+  }
+
+  .from-left.appear,
+  .from-right.appear,
+  .from-bottom.appear{
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+/* Fade Animations - Slut */
+
+
+/* Header, Navigation, Burgermenu - Start */
+
+header{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #FB8500;
+    height: 100px;
+}
+
+.logo{
+    width: 80px;
+}
+
+.header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.nav-menu i{
+    color: white;
+    display: none;
+}
+
+
+.hamburger-cart-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hamburger-cart-container i{
+    color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    left: -100%;
+    top: 100px;
+    flex-direction: column;
+    background-color: #FB8500;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    height: 100vh;
+    list-style-type: none;
+    z-index: 100;
+}
+
+.nav-link{
+    font-family: 'Sansita Swashed', cursive;
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+}
+
+.nav-item {
+    margin: 16px 0;
+}
+
+.nav-menu.active {
+    left: 0;
+    width: 100%;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Header, Navigation, Burgermenu - Slut */
+
+/* Original Sektion - Start */
+
+.original{
+    background-image: url(/img/wave.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100vw;
+    display: grid;
+}
+
+.original-text{
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1{
+    font-family: 'Sansita Swashed', cursive;
+    color: #FFA500;
+    font-weight: 550;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 24px;
+}
+
+.orange-p{
+    color: #FFA500;
+}
+
+.img-container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.original-img{
+    width: 100%;
+}
+
+.buy-orange{
+    background-color: #FFA500;
+    text-decoration: none;
+    color: black;
+    padding: 10px 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-container{
+    margin: auto;
+    padding: 0 0 8rem 0;
+}
+
+.btn-container-pc{
+    display: none;
+}
+
+/* Original Sektion - Slut */
+
+/* Light Sektion - Start */
+
+.light{
+    background-color: #FFA500;
+    background-image: url(/img/wave-2.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100vw;
+    display: grid;
+}
+
+.light-text{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.light-img{
+    width: 100%;
+}
+
+.buy-white{
+    background-color: #F7F5FB;
+    text-decoration: none;
+    color: black;
+    padding: 10px 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.white-p{
+    color: #F7F5FB;
+}
+
+h2{
+    font-family: 'Sansita Swashed', cursive;
+    color: #F7F5FB;
+    font-weight: 550;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Light Sektion - Slut */
+
+/* Infographic Sektion - Start */
+
+.info-img{
+    width: 100%;
+    padding-bottom: 6rem;
+}
+
+
+.info-container{
+    background-image: url(/img/wave.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100vw;
+}
+
+/* Infographic Sektion - Slut */
+
+/* Shop Sektion - Start */
+
+.shop{
+   background-color: #FFA500;
+   background-image: url(/img/wave-2.svg);
+   background-repeat: no-repeat;
+   background-position: bottom;
+   background-size: 100%;
+   height: 300px;
+}
+
+
+.shop-text-container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.shop-text-container p{
+    font-family: 'Sansita Swashed', cursive;
+    text-decoration: none;
+    color: #F7F5FB;
+    font-size: 24px;
+    text-align: center;
+}
+
+.webshop-btn{
+    background-color: #F7F5FB;
+    text-decoration: none;
+    color: black;
+    padding: 10px 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-container-read{
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 0 0 0 ;
+}
+
+
+/* Shop Sektion - Slut */
+
+/* Historie Sektion - Start */
+
+.story{
+    background-image: url(/img/circle.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 300px;
+}
+
+.story-text-container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.story-text-container p{
+    font-family: 'Sansita Swashed', cursive;
+    text-decoration: none;
+    color: #FFA500;
+    font-size: 24px;
+    padding: 3rem 0 2rem 0;
+    text-align: center;
+}
+
+.story-btn{
+    background-color: #FFA500;
+    text-decoration: none;
+    color: black;
+    padding: 10px 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Historie Sektion - Slut */
+
+/* Footer - Start */
+
+footer{
+    background-color: #FFB703;
+    padding: 0 0 2rem 0;
+  }
+
+  .footer-title{
+    font-family: 'Sansita Swashed', cursive;
+    color: #F7F5FB;
+    font-weight: 550;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    font-size: 24px;
+  }
+
+  .footer-contact a, .footer-contact li{
+    text-decoration: none;
+    color: #F7F5FB;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .footer-social ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .footer-social a{
+    color: #F7F5FB;
+    text-decoration: none;
+    font-size: 35px;
+  }
+
+  .footer-nav a, .footer-nav li{
+    text-decoration: none;
+    color: #F7F5FB;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .footer-contact ul{
+    list-style-type: none;
+  }
+
+  .footer-nav ul{
+    list-style-type: none;
+  }
+
+  /* Footer - Slut */
+
+  /* Brakpoint Tablet (Ingen Ændringer fra Telefon til Tablet)*/
+
+  /* Breakpoint Computer */
+
+  @media (min-width:821px){
+
+    /* Header Start */
+
+    .nav-menu {
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        left: 0;
+        top: 0;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        gap: 4rem;
+    }
+
+    .nav-menu i{
+        display: block;
+    }
+
+    .nav-menu a{
+        text-decoration: none;
+    }
+
+    .hamburger-cart-container{
+        display: none;
+    }
+
+    .nav-link{
+        font-size: 24px;
+    }
+    .nav-link:hover{
+        text-decoration: underline;
+    }
+  
+
+    /* Header Slut */
+
+    /* Original Sektion - Start */
+    .original{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 500px;
+        padding: 40px 0 0 0 ;
+    }
+
+    .btn-container{
+        display: none;
+    }
+
+    .btn-container-pc{
+        display: block;
+        text-align: center;
+        padding: 30px 0 0 0 ;
+    }
+
+    /* Original Sektion - Slut */
+
+    /* Light Sektion - Start */
+
+    .light{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 500px;
+    }
+
+    .light-text{
+        order: 2;
+    }
+
+    /* Light Sektion - Slut */
+
+    /* Info Sektion - Start */
+
+    .info-container{
+        height: 600px;
+    }
+
+    .btn-container-read{
+        display: none;
+        
+    }
+
+    .info-container img{
+        width: 70%;
+        padding: 0;
+    }
+
+    .img-container-info{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* Info Sektion - Slut */
+
+    /* Shop Sektion - Start */
+
+    .shop-text-container p{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* Shop - Sektion - Slut */
+
+    /* Story Sektion - Start */
+
+    .story{
+        background-image: none;
+    }
+
+    .story-text-container{
+        background-image: url(/img/circle.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .story-text-container p{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* Story Sektion - Slut */
+
+  }
+
+  /* Breakpoint Bigger PC Screens */
+  
+  @media (min-width: 1025px){
+
+    .header-nav{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    article{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    section{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    /* Original Sektion - Start */
+
+    .original{
+        height: 700px;
+        padding: 60px 0 0 0 ;
+    }
+
+    /* Original Sektion - Slut */
+
+    /* Light Sektion - Start */
+
+    .light{
+        height: 700px;
+    }
+
+    /* Light Sektion - Slut */
+
+    /* Info Sektion - Start */
+
+    .info-container{
+        height: 800px;
+    }
+
+    /* Info Sektion - Slut */
+
+    /* Shop Sektion - Start */
+
+    .shop{
+        height: 500px;
+    }
+
+    /* Shop Sektion - Slut */
+
+    /* Story Sektion - Start */
+
+    .story{
+        display: grid;
+        align-items: center;
+    }
+
+    .story-text-container p{
+        width: 55%;
+    }
+
+    /* Story Sektion - Slut */
+  }
+
+
+  

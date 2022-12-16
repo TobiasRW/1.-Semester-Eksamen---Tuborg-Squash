@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /mobilefirst *
+Disallow: /onlinemagasin *
+Disallow: /squash *
+
+Allow: /public_html
+
+Sitemap: https://mobilefirst.tobiaswolmar.dk/sitemap.xml
+
+Sitemap: https://squash.tobiaswolmar.dk/sitemap.xml

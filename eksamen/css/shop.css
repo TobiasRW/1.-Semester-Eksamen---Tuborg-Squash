@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #F7F5FB;
+}
+
+
+
+
+/* Header, Navigation, Burgermenu - Start */
+
+header{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #FB8500;
+    height: 100px;
+}
+
+.logo{
+    width: 80px;
+}
+
+.header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.nav-menu i{
+    color: white;
+    display: none;
+}
+
+
+.hamburger-cart-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hamburger-cart-container i{
+    color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    left: -100%;
+    top: 100px;
+    flex-direction: column;
+    background-color: #FB8500;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    height: 100vh;
+    list-style-type: none;
+}
+
+.nav-link{
+    font-family: 'Sansita Swashed', cursive;
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+}
+
+.nav-item {
+    margin: 16px 0;
+}
+
+.nav-menu.active {
+    left: 0;
+    width: 100%;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Header, Navigation, Burgermenu - Slut */
+
+/* Shop - Start */
+
+h1{
+    font-family: 'Sansita Swashed', cursive;
+    color: #FFA500;
+    font-weight: 550;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 32px;
+}
+
+h3{
+    font-family: 'Sansita Swashed', cursive;
+    color: #FFA500;
+    font-weight: 550;
+    text-align: center;
+    font-size: 24px;
+}
+
+article a{
+    background-color: #FFA500;
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-container{
+    padding: 30px 0 0 0 ;
+}
+
+.align-btn{
+    text-align: center;
+    padding: 192px 0 0 0 ;
+}
+
+.original{
+    text-align: center;
+    padding: 64px 0 0 0 ;
+}
+
+
+figure{
+    width: 100%;
+}
+
+img.can{
+    width: 100%;
+}
+
+img.tee{
+    width: 50%;
+    padding-bottom: 40px;
+}
+
+img.bag{
+    width: 50%;
+    padding-bottom: 40px;
+}
+
+/* Shop - Slut */
+
+/* Footer - Start */
+
+footer{
+    background-color: #FFB703;
+    padding: 0 0 2rem 0;
+  }
+
+  .footer-title{
+    font-family: 'Sansita Swashed', cursive;
+    color: #F7F5FB;
+    font-weight: 550;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    font-size: 24px;
+  }
+
+  .footer-contact a, .footer-contact li{
+    text-decoration: none;
+    color: #F7F5FB;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .footer-social ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .footer-social a{
+    color: #F7F5FB;
+    text-decoration: none;
+    font-size: 35px;
+  }
+
+  .footer-nav a, .footer-nav li{
+    text-decoration: none;
+    color: #F7F5FB;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .footer-contact ul{
+    list-style-type: none;
+  }
+
+  .footer-nav ul{
+    list-style-type: none;
+  }
+
+  .bag-white{
+    padding: 192px 0 90px 0;
+  }
+  /* Footer - Slut */
+
+  /* Brakpoint Tablet (Ingen Ændringer fra Telefon til Tablet)*/
+
+  /* Breakpoint Computer */
+
+  @media (min-width:821px){
+
+    .header-nav{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    main{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    footer{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+     /* Header Start */
+
+     .nav-menu {
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        left: 0;
+        top: 0;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        gap: 4rem;
+    }
+
+    .nav-menu i{
+        display: block;
+    }
+
+    .nav-menu a{
+        text-decoration: none;
+    }
+
+    .hamburger-cart-container{
+        display: none;
+    }
+
+    .nav-link{
+        font-size: 24px;
+    }
+
+    .nav-link:hover{
+        text-decoration: underline;
+    }
+  
+
+    /* Header Slut */
+
+    .shop-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .original{
+        padding: 0 0 0 0 ;
+    }
+
+    .align-btn{
+        padding: 0;
+    }
+
+    .pc-padding{
+        padding: 100px 0 100px 0 ;
+    }
+
+    .items{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+  }

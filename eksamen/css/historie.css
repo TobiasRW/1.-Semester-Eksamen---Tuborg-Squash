@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sansita+Swashed:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #F7F5FB;
+}
+
+.poster-fig{
+    margin: 0 auto;
+}
+
+img.poster{
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+iframe{
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+/* Fade Animations - Start */
+
+.fade-in{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+  }
+
+  .fade-in.appear{
+    opacity: 1;
+  }
+
+  .from-left{
+    transform: translateX(-100px);
+  }
+
+  .from-right{
+    transform: translateX(100px);
+  }
+
+  .from-bottom{
+    transform: translateY(50px);
+  }
+
+  .from-left,
+  .from-right,
+  .from-bottom{
+    transition: opacity 400ms ease-in, transform 400ms ease-in;
+    opacity: 0;
+  }
+
+  .from-left.appear,
+  .from-right.appear,
+  .from-bottom.appear{
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+/* Fade Animations - Slut */
+
+
+/* Header, Navigation, Burgermenu - Start */
+
+header{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #FB8500;
+    height: 100px;
+}
+
+.logo{
+    width: 80px;
+}
+
+.header-nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.nav-menu i{
+    color: white;
+    display: none;
+}
+
+
+.hamburger-cart-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hamburger-cart-container i{
+    color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    left: -100%;
+    top: 100px;
+    flex-direction: column;
+    background-color: #FB8500;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    height: 100vh;
+    list-style-type: none;
+    z-index: 100;
+}
+
+.nav-link{
+    font-family: 'Sansita Swashed', cursive;
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+}
+
+.nav-item {
+    margin: 16px 0;
+}
+
+.nav-menu.active {
+    left: 0;
+    width: 100%;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Header, Navigation, Burgermenu - Slut */
+
+/* Artikel Sektion - Start */
+
+
+h1{
+    font-family: 'Sansita Swashed', cursive;
+    color: #FFA500;
+    font-weight: 550;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 32px;
+}
+
+p{
+    color: #FFA500;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Artikel Sektion - Slut */
+
+/* Comparison slider */
+
+.container{
+    display: grid;
+    place-items: center;
+    padding: 60px 0;
+}
+
+.image-container img{
+    max-width: 100%;
+}
+
+.slide-container{
+    display: grid;
+    place-content: center;
+    position: relative;
+    overflow: hidden;
+    --position: 50%;
+}
+
+.image-container{
+    max-width: 300px;
+}
+
+.slider-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+.image-before{
+    position: absolute;
+    inset: 0;
+    width: var(--position);
+}
+
+.slider{
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    opacity: 0;
+    /* for firefox - start */
+    width: 100%;
+    height: 100%;
+    /* for firefox - slut */
+}
+
+.slider:focus-visible ~ .slider-button{
+    outline: 5px solid black;
+    outline-offset: 3px;
+}
+
+.slider-line{
+    position: absolute;
+    inset: 0;
+    width: .2rem;
+    height: 100%;
+    background-color: white;
+    z-index: 10;
+    left: var(--position);
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.slider-button{
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: .5rem;
+    border-radius: 100vw;
+    display: grid;
+    place-items: center;
+    top: 50%;
+    left: var(--position);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 100;
+    box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
+}
+
+/* Comparison slider */
+
+.timeline{
+    display: none;
+}
+
+/* Footer - Start */
+
+footer{
+    background-color: #FFB703;
+    padding: 0 0 2rem 0;
+  }
+
+  .footer-title{
+    font-family: 'Sansita Swashed', cursive;
+    color: #F7F5FB;
+    font-weight: 550;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    font-size: 24px;
+  }
+
+  .footer-contact a, .footer-contact li{
+    text-decoration: none;
+    color: #F7F5FB;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .footer-social ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .footer-social a{
+    color: #F7F5FB;
+    text-decoration: none;
+    font-size: 35px;
+  }
+
+  .footer-nav a, .footer-nav li{
+    text-decoration: none;
+    color: #F7F5FB;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .footer-contact ul{
+    list-style-type: none;
+  }
+
+  .footer-nav ul{
+    list-style-type: none;
+  }
+  /* Footer - Slut */
+
+  /* Breakpoint Tablet */
+
+  @media (min-width:426px){
+
+    article{
+        background-image: url(/img/wave.svg);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 100vw;
+        padding: 0 0 100px 0;
+    }
+    
+    .timeline{
+        background-color: #FFA500;
+        display: block;
+        padding: 0 0 50px 0;
+    }
+
+    .timeline img{
+        width: 100%;
+    }
+
+    figure{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .poster-fig{
+        margin: 0 auto;
+    }
+    
+    img.poster{
+        width: 40%;
+    }
+    
+    
+    
+  }
+
+
+  /* Breakpoint Computer */
+
+  @media (min-width:821px){
+
+     /* Header Start */
+
+     .nav-menu {
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        left: 0;
+        top: 0;
+        flex-direction: row;
+        background-color: transparent;
+        width: auto;
+        height: auto;
+        gap: 4rem;
+    }
+
+    .nav-menu i{
+        display: block;
+    }
+
+    .nav-menu a{
+        text-decoration: none;
+    }
+
+    .hamburger-cart-container{
+        display: none;
+    }
+
+    .nav-link{
+        font-size: 24px;
+    }
+
+    .nav-link:hover{
+        text-decoration: underline;
+    }
+
+    /* Header Slut */
+
+    article{
+        padding: 0 0 150px 0;
+    }
+
+    .timeline img{
+        width: 80%;
+    }
+
+    p{
+        width: 60%;
+    }
+    
+    .header-nav{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    main{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+
+    footer{
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+  }
